@@ -67,10 +67,14 @@ class Amazon_SES extends AWS_Plugin_Base {
 	 */
 	public function mail( $to, $subject, $message, $headers = '' ) {
 		try {
+			if ( is_string( $to ) ) :
+				$to = array( $to );
+			endif;
+
 			$this->get_sesclient( self::DEFAULT_REGION )->sendEmail( array(
 				'Source' => get_option( 'admin_email' ),
 				'Destination' => array(
-					'ToAddresses' => array( $to )
+					'ToAddresses' => $to
 				),
 				'Message' => array(
 					'Subject' => array(
