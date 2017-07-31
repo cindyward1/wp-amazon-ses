@@ -3,13 +3,13 @@
 Plugin Name: WP Amazon SES
 Description: Send mail using Amazon SES
 Author: Michael Lippold
-Version: 0.0.1
+Version: 0.0.2
 */
 
-$GLOBALS['aws_meta']['amazon-ses']['version'] = '0.0.1';
-$GLOBALS['aws_meta']['amazon-web-services']['supported_addon_versions']['amazon-ses'] = '0.0.1';
+$GLOBALS['aws_meta']['amazon-ses']['version'] = '0.0.2';
+$GLOBALS['aws_meta']['amazon-web-services']['supported_addon_versions']['amazon-ses'] = '0.0.2';
 
-$aws_plugin_version_required = '1.0';
+$aws_plugin_version_required = '1.0.0';
 
 require dirname( __FILE__ ) . '/classes/wp-aws-compatibility-check.php';
 global $amazon_ses_compat_check;
